@@ -9,7 +9,7 @@ public with sharing class ApexJobService {
     }
 
     public Id executeBatch() {
-        this.batchApexJobId = Database.executeBatch(new IdleJob());
+        this.batchApexJobId = Database.executeBatch(new IdleJob(), 1);
         return this.batchApexJobId;
     }
 
